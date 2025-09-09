@@ -1,1 +1,18 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
+@import "ng-zorro-antd/ng-zorro-antd.min.css";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+nz-layout {
+  height: 100%;
+}
+
+.inner-content {
+  background: #fff;
+  padding: 24px;
+  min-height: calc(100vh - 134px); /* header + footer trừ ra */
+}

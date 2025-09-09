@@ -1,3 +1,66 @@
-<p>
-  login works!
-</p>
+<div class="login-wrapper">
+  <form
+    nz-form
+    [formGroup]="validateForm"
+    class="login-form"
+    (ngSubmit)="submitForm()"
+  >
+    <h2 class="login-title">Xin chào</h2>
+    <p class="login-subtitle">Đăng nhập để tiếp tục</p>
+
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your emailId!">
+        <nz-input-group nzPrefixIcon="user">
+          <input
+            type="text"
+            nz-input
+            formControlName="emailId"
+            placeholder="EmailId"
+          />
+        </nz-input-group>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Please input your password!">
+        <nz-input-group nzPrefixIcon="lock" [nzSuffix]="suffixIcon">
+          <input
+            [type]="passwordVisible ? 'text' : 'password'"
+            nz-input
+            formControlName="password"
+            placeholder="Password"
+          />
+        </nz-input-group>
+        <ng-template #suffixIcon>
+          <span
+            nz-icon
+            [nzType]="passwordVisible ? 'eye-invisible' : 'eye'"
+            (click)="passwordVisible = !passwordVisible"
+            style="cursor: pointer"
+          ></span>
+        </ng-template>
+      </nz-form-control>
+    </nz-form-item>
+
+    <div class="login-options">
+      <label nz-checkbox formControlName="remember">
+        <span>Remember me</span>
+      </label>
+      <a class="login-form-forgot">Quên mật khẩu?</a>
+    </div>
+
+    <button
+      nz-button
+      class="login-form-button"
+      [nzType]="'primary'"
+      [disabled]="!validateForm.valid"
+    >
+      Log in
+    </button>
+
+    <div class="login-register">
+      <span>Chưa có tài khoản?</span>
+      <a class="btn-register">Đăng ký ngay!</a>
+    </div>
+  </form>
+</div>

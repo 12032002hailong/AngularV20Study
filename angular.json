@@ -29,7 +29,11 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.css"]
+            "styles": [
+              "src/styles.css",
+              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ]
           },
           "configurations": {
             "production": {
@@ -87,10 +91,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/styles.css"
-            ]
+            "styles": ["src/styles.css"]
           }
         }
       }

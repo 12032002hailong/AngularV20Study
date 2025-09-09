@@ -4,6 +4,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { LeaveComponent } from './pages/leave/leave.component';
+import { SignalExComponent } from './pages/signal-ex/signal-ex.component';
 
 export const routes: Routes = [
   {
@@ -14,6 +15,10 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
+  },
+  {
+    path: 'signal-ex',
+    component: SignalExComponent,
   },
   {
     path: '',
