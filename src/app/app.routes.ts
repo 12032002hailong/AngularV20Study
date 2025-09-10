@@ -5,6 +5,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { LeaveComponent } from './pages/leave/leave.component';
 import { SignalExComponent } from './pages/signal-ex/signal-ex.component';
+import { ControlFlowComponent } from './pages/control-flow/control-flow.component';
 
 export const routes: Routes = [
   {
@@ -19,6 +20,10 @@ export const routes: Routes = [
   {
     path: 'signal-ex',
     component: SignalExComponent,
+  },
+  {
+    path: 'control-flow',
+    component: ControlFlowComponent,
   },
   {
     path: '',
