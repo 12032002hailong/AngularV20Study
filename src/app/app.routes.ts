@@ -6,12 +6,17 @@ import { EmployeeComponent } from './pages/employee/employee.component';
 import { LeaveComponent } from './pages/leave/leave.component';
 import { SignalExComponent } from './pages/signal-ex/signal-ex.component';
 import { ControlFlowComponent } from './pages/control-flow/control-flow.component';
+import { App } from './app';
 
 export const routes: Routes = [
+  // {
+  //   path: '',
+  //   redirectTo: 'login',
+  //   pathMatch: 'full',
+  // },
   {
     path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
+    component: App,
   },
   {
     path: 'login',
@@ -25,22 +30,22 @@ export const routes: Routes = [
     path: 'control-flow',
     component: ControlFlowComponent,
   },
-  {
-    path: '',
-    component: LayoutComponent,
-    children: [
-      {
-        path: 'dashboard',
-        component: DashboardComponent,
-      },
-      {
-        path: 'employee',
-        component: EmployeeComponent,
-      },
-      {
-        path: 'leaves',
-        component: LeaveComponent,
-      },
-    ],
-  },
+  // {
+  //   path: '',
+  //   component: LayoutComponent,
+  //   children: [
+  //     {
+  //       path: 'dashboard',
+  //       component: DashboardComponent,
+  //     },
+  //     {
+  //       path: 'employee',
+  //       component: EmployeeComponent,
+  //     },
+  //     {
+  //       path: 'leaves',
+  //       component: LeaveComponent,
+  //     },
+  //   ],
+  // },
 ];

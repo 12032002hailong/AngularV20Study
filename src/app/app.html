@@ -1,4 +1,12 @@
 <main>
-  <!-- <app-inline-editing></app-inline-editing> -->
+  <nz-layout>
+    <nz-header>
+      <ul nz-menu nzTheme="dark" nzMode="horizontal">
+        <li nz-menu-item routerLink="login">Login</li>
+        <li nz-menu-item routerLink="signal-ex">Signal-ex</li>
+        <li nz-menu-item routerLink="control-flow">Control-flow</li>
+      </ul>
+    </nz-header>
+  </nz-layout>
 </main>
-<router-outlet />
+<router-outlet></router-outlet>
